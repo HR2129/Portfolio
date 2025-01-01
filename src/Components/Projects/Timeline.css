@@ -1,0 +1,34 @@
+/* src/Timeline.css */
+.timeline {
+    position: relative;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e5e7eb; /* Tailwind's gray-200 */
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    position: relative;
+  }
+  
+  .timeline-date {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+    text-align: left;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+    text-align: left;
+  }
